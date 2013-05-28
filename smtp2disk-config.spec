@@ -1,6 +1,6 @@
 Name:           smtp2disk-config
 Version:        1
-Release:        0%{?dist}
+Release:        1%{?dist}
 Summary:        A user for queing the SMTP messages to disk instead of delivery.
 
 Group:          Development/Libraries
@@ -49,6 +49,9 @@ cp .procmailrc "$RPM_BUILD_ROOT/home/smtp2disk/.procmailrc"
 %clean 
 rm -rf $RPM_BUILD_ROOT
 
+%post
+chmod go+rx ~smtp2disk/
+
 
 %files
 %defattr(644,smtp2disk,smtp2disk,755)
@@ -58,6 +61,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue May 28 2013 Jason Pyeron <support@pdinc.us> - 1-1
+- make home dir readable
+
 * Tue May 28 2013 Jason Pyeron <support@pdinc.us> - 1-0
 - initial build
 
