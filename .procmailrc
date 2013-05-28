@@ -1,0 +1,12 @@
+DEFAULT=$HOME/Maildir/
+MAILDIR=$HOME/Maildir/
+
+#VERBOSE=YES
+#LOGFILE=$HOME/.procmail.log
+
+DYNAMICFOLDER=`/usr/bin/emailaddress2folder.pl`
+
+:0
+$DYNAMICFOLDER/
+
+
