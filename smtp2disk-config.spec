@@ -1,6 +1,6 @@
 Name:           smtp2disk-config
-Version:        1
-Release:        1%{?dist}
+Version:        2
+Release:        0%{?dist}
 Summary:        A user for queing the SMTP messages to disk instead of delivery.
 
 Group:          Development/Libraries
@@ -12,7 +12,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires:	smtp2disk-user
 Requires:	postfix
 Requires:	procmail
-Requires:	emailAddress2Folder
+Requires:	emailAddress2Folder >= 2
 BuildRequires:	smtp2disk-user
 
 BuildArch:      noarch
@@ -61,6 +61,9 @@ chmod go+rx ~smtp2disk/
 
 
 %changelog
+* Sun Jan 28 2018 Jason Pyeron <support@pdinc.us> - 2-0
+- leverage TO/FROM foldering
+
 * Tue May 28 2013 Jason Pyeron <support@pdinc.us> - 1-1
 - make home dir readable
 

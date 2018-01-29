@@ -4,9 +4,15 @@ MAILDIR=$HOME/Maildir/
 #VERBOSE=YES
 #LOGFILE=$HOME/.procmail.log
 
-DYNAMICFOLDER=`/usr/bin/emailaddress2folder.pl`
+DYNAMICFOLDERFROM=`/usr/bin/emailaddress2folder.pl FROM`
+DYNAMICFOLDERTO=`/usr/bin/emailaddress2folder.pl TO`
 
+:0c
+$DYNAMICFOLDERTO/
+:0c
+$DYNAMICFOLDERFROM/
 :0
-$DYNAMICFOLDER/
+$HOME/Maildir/
+
 
 
