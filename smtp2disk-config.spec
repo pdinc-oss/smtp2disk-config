@@ -1,6 +1,6 @@
 Name:           smtp2disk-config
 Version:        2
-Release:        0%{?dist}
+Release:        1%{?dist}
 Summary:        A user for queing the SMTP messages to disk instead of delivery.
 
 Group:          Development/Libraries
@@ -61,6 +61,9 @@ chmod go+rx ~smtp2disk/
 
 
 %changelog
+* Sun Feb 2 2018 Jason Pyeron <support@pdinc.us> - 2-1
+- build script
+
 * Sun Jan 28 2018 Jason Pyeron <support@pdinc.us> - 2-0
 - leverage TO/FROM foldering
 
